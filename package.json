@@ -1,0 +1,41 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "The Backend for wild-fusion Drug Prescription reminder web API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix"
+  },
+  "author": "karo uwede",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "2.4.3",
+    "body-parser": "1.18.3",
+    "cors": "2.8.5",
+    "dotenv": "6.2.0",
+    "express": "^4.16.4",
+    "express-async-handler": "^1.1.4",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "5.4.12",
+    "node-cron": "^2.0.3",
+    "nodemailer": "^6.4.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "homepage": "",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
