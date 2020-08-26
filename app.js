@@ -12,7 +12,7 @@ require('./settings/settings');
 
 const app = express();
 
-// require('./cron/cron');
+require('./cron/cron');
 
 const port = process.env.PORT || 8080;
 const appName = process.env.APP_NAME;
