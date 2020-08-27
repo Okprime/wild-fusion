@@ -3,7 +3,7 @@ const cron = require('node-cron');
 const remainder = require('../service/remainder');
 const prescriptionModel = require('../model/prescription');
 
-// Send a remainder email every 10 minutes
+// Send a remainder email every minute
 cron.schedule('* * * * *', async () => {
   console.log('This scheduler runs every minute');
 
