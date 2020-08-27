@@ -4,11 +4,10 @@ const remainder = require('../service/remainder');
 const prescriptionModel = require('../model/prescription');
 
 // Send a remainder email every 8 hours
-cron.schedule('10 * * * *', async () => {
-  console.log('This scheduler runs every 10 minutes');
+cron.schedule('* * * * *', async () => {
+  console.log('This scheduler runs every minute');
 
-  async function getPrescription() {
-  }
+  async function getPrescription() {}
 
   await getPrescription();
   {
