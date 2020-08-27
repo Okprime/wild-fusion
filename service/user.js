@@ -33,9 +33,15 @@ module.exports = {
       const result = await userModel.create(format);
       const token = await generateTokenForAClient(result);
       delete format.password;
-      return { result, token };
+      return {
+        _id: result._id,
+        email: result.email,
+        phone_number: result.phone_number,
+        name: result.name,
+        token,
+      };
     } catch (e) {
-      console.log('The error got here', e);
+      console.log('The error got here');
       if (e.name === 'MongoError' && e.code === 11000) {
         return false;
       }

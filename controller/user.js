@@ -45,8 +45,8 @@ module.exports = {
       });
     }
     req.body.phone_number = newNumber;
-    const { result, token } = await service.userSignUp(req.body);
-    console.log('result', result, token);
+    const result = await service.userSignUp(req.body);
+    console.log('result', result);
     let messageBody;
     if (result === false) {
       messageBody = 'Email already exist';
@@ -62,7 +62,6 @@ module.exports = {
     return res.successResponse({
       message: messageBody,
       data: result,
-      token,
     });
   },
 
