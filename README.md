@@ -19,7 +19,11 @@ WILD-FUSION ASSESSMENT TEST
 
 For the sake of this assessment, the cron is set to run for every 10 minutes
 
-A token much be passed for each user sign-in and any request made. Only the `/sign-up` endpoint is exempted.
+A token much be passed for each user sign-in and any request made. Only the `/sign-up` endpoint is exempted. An example with a dummy token is shown below;
+
+        KEY                 VALUE
+        x-access-token      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJfaWQiOiI1ZjQ2YzY5NjY4MjMxMDQxZWFiNjJiOTgiLCJlbWFpbCI6Imthcm9AdGVzdC5jb20iLCJwYXNzd29yZ
+        
 
 
 

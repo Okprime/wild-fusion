@@ -72,10 +72,10 @@ module.exports = {
     await signInSchema.validateAsync(req.body);
     const data = await service.getOneData(userModel, req.body);
     const isExist = await service.validateUser(data, req.body.password);
-    console.log('here too', isExist);
+    console.log('isExist', isExist);
 
     if (isExist) {
-      console.log('success');
+      console.log('Sign in was successful');
       messageBody = 'Sign in was successful';
       return res.successResponse({
         message: messageBody,

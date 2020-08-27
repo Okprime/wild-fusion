@@ -5,7 +5,7 @@ const prescriptionModel = require('../model/prescription');
 
 // Send a remainder email every 10 minutes
 cron.schedule('10 * * * *', async () => {
-  console.log('This scheduler runs every minute');
+  console.log('This scheduler runs every 10 minutes');
 
   async function getPrescription() {}
 
@@ -15,6 +15,7 @@ cron.schedule('10 * * * *', async () => {
       const data = await prescriptionModel.find();
       for (const obj of data) {
         await remainder.sendNotification(obj);
+        console.log('...');
       }
     } catch (e) {
       console.log('another kind of error', e);
